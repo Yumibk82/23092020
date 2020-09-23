@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay dung lop hinh tron</title>
+</head>
+<body>
+<script>
+    let circle = function (radius){
+        this.radius = radius;
+        this.getRadius = function () {
+            return radius;
+        }
+        this.getAre = function (){
+            return  Math.PI*radius*radius;
+        }
+    }
+    let c1 = new circle(2);
+    let r1=c1.getRadius();
+    let a1=c1.getAre();
+    alert("radius is :"+r1+";"+"acreage is :"+ a1);
+
+</script>
+</body>
+</html>
