@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (tem){
+        this.tem= tem;
+        this.convertCToF = function (){
+            return 1.8*this.tem +32;
+        }
+        this.convertCToK = function (){
+            return this.tem +273;
+        }
+    }
+    let T = new Temperature(25);
+    let F = T.convertCToF();
+    let K = T.convertCToK();
+    document.write(F +","+ K);
+</script>
+</body>
+</html>
