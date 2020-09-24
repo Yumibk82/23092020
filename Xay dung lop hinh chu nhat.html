@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay dung lop hinh chu nhat</title>
+</head>
+<canvas id="myCanvas" width="500" height="300" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.
+</canvas>
+<body>
+
+<script>
+    let Rectangular = function (height,width) {
+        this.height = height;
+        this.width = width;
+
+        this.getArea = function () {
+            return this.height * this.width;
+        }
+        this.perimeter = function () {
+            return 2 * this.height * this.width;
+        }
+        this.display = function () {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.rect(100, 100, this.height, this.width);
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+        }
+    }
+    let r1 = new Rectangular(400, 200);
+    let a1 = r1.getArea();
+    let p1 = r1.perimeter();
+    r1.display();
+    document.write(a1,p1);
+
+
+</script>
+</body>
+</html>
